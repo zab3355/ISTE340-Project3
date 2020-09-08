@@ -1,0 +1,49 @@
+﻿@model RITFacultyV1.ViewModels.EmploymentViewModels
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" />
+
+<h2 class="pageHeading">@Model.Title</h2>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(document).ready(function () {
+            $('#EmploymentDataTable').DataTable();
+        });
+    });
+</script>
+<div class="container">
+    <div class="row">
+        <h3 class="text-center">Professional Employment Data</h3>
+    </div>
+    <div class="row">
+        <table id="EmploymentDataTable" class="display" style="width:100%">
+            <thead class="dataTable">
+                <tr>
+                    <th>Employer</th>
+                    <th>Degree</th>
+                    <th>City</th>
+                    <th>Title</th>
+                    <th>Start Date</th>
+                </tr>
+            </thead>
+            <tbody class="dataTable">
+                @foreach (var employmentTable in Model.EmploymentTable)
+                {
+                <tr>
+                    <td>@employmentTable.employer;</td>
+                    <td>@employmentTable.degree;</td>
+                    <td>@employmentTable.city;</td>
+                    <td>@employmentTable.title;</td>
+                    <td>@employmentTable.startDate;</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

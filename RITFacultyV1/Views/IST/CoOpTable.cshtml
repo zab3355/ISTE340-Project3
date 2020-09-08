@@ -1,0 +1,45 @@
+﻿@model RITFacultyV1.ViewModels.CoOpViewModels
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" />
+
+<h2 class="pageHeading">@Model.Title</h2>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(document).ready(function () {
+            $('#coOpDataTable').DataTable();
+        });
+    });
+</script>
+<div class="container">
+    <div class="row">
+        <h3 class="text-center">Co-Op Data</h3>
+    </div>
+    <div class="row">
+        <table id="coOpDataTable" class="display" style="width:100%">
+            <thead class="dataTable">
+                <tr>
+                    <th>Employer</th>
+                    <th>Degree</th>
+                    <th>City</th>
+                    <th>Term</th>
+                </tr>
+            </thead>
+            <tbody class="dataTable">
+                @foreach (var coopTable in Model.CoOpTable)
+                {
+                <tr>
+                    <td>@coopTable.employer;</td>
+                    <td>@coopTable.degree;</td>
+                    <td>@coopTable.city;</td>
+                    <td>@coopTable.term;</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

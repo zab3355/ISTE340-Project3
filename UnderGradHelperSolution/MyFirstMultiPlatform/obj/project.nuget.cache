@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bLtSRQAQOil5hNveIZIXGkFs/jfsaWq9CyTx3H8pw6O1rSOfZmWwMumVpadXr78DG4PcQub0yzmjrOr4Ir317A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Paul Goldman\\OneDrive\\Documents\\Spring2020Videos\\WeekOf4_13A\\UnderGradHelperSolution\\MyFirstMultiPlatform\\MyFirstMultiPlatform.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Paul Goldman\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

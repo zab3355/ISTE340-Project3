@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MyFirstMultiPlatform": {
+      "commandName": "Project",
+      "commandLineArgs": "\"under\" \"grad\""
+    }
+  }
+}

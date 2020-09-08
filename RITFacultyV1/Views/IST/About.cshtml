@@ -1,0 +1,25 @@
+﻿@model RITFacultyV1.ViewModels.AboutViewModels
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" />
+
+<h2 class="pageHeading">@Model.Title</h2>
+
+<div class="col-sm-12 col-lg-12 col-md-12">
+    <h3 class="topicGrads">
+        @Model.aboutTitle
+    </h3>
+    <h3 class="captionDegree">
+        @Model.aboutDescription
+    </h3>
+    <h3 style="font-size:medium">
+        @Model.aboutQuote
+    </h3>
+    <h3 style="font-size:small">
+        @Model.aboutQuoteAuthor
+    </h3>
+</div>
+
